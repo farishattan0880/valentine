@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine 💖</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #fff5f8; /* لون خلفية هادئ ومناسب */
+      text-align: center;
+      margin-top: 50px;
+    }
+    img {
+      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .container {
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    #yes {
+      background-color: #ff4d6d;
+      color: white;
+    }
+    #no {
+      background-color: #888;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="img" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2dxdmEweXh1ZjIxbGlyZHZjb3MwdHJ0dDg5cXhpdmk0MmF4dXc2YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5dUllWbKVlaqmMTvHb/giphy.gif">
+  <h2 id="text">Will you be my Valentine? 💘</h2>
+
+  <div id="buttons-container">
+    <button id="yes" onclick="yes()">Yes</button>
+    <button id="no" onclick="no()">No</button>
+  </div>
+
+  <script>
+    let size = 18;
+
+    function no() {
+      // تكبير زر الـ "Yes" عند الضغط على "No"
+      size += 15; 
+      document.getElementById("yes").style.fontSize = size + "px";
+      document.getElementById("yes").style.padding = (size/2) + "px " + size + "px";
+    }
+
+    function yes() {
+      // 1. تغيير الصورة
+      document.getElementById("img").src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHM2anNxZjYyYWpheHV5M3E4MzQ1b3JjNm50anRhbmltaHczMWQxMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ub50tFEM3yaOs/giphy.gif";
+      
+      // 2. تغيير النص
+      document.getElementById("text").innerText = "YAYYYY!!! 💖🎉";
+      
+      // 3. إخفاء حاوية الأزرار بالكامل
+      document.getElementById("buttons-container").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
